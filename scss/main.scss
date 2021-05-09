@@ -32,6 +32,12 @@ section {
         font-size: 1.2em;
 
         @media (min-width: 768px) {
+            width: 60vw;
+            padding-bottom: 1em;
+            font-size: 1.5em;
+        }
+
+        @media (min-width: 1296px) {
             width: 50vw;
             padding-bottom: 1em;
             font-size: 1.5em;
@@ -76,6 +82,35 @@ section {
     margin: 30px 0;
     font-size: 0.8em;
     text-align: center;
+    display: flex;
+
+    flex-direction: column;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+    }
+
+    &__logo, &__empty-col {
+        flex: 1;
+    }
+
+    &__logo {
+        min-height: 80px;
+        margin-bottom: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .logo--columbia {
+        background-image: url("../assets/img/columbia_logo.png");
+    }
+    .logo--tas {
+        background-image: url("../assets/img/tas_logo.png");
+    }
+
+    &__text {
+        flex: 5;
+    }
 
     h2 {
         font-size: 1.1em;
@@ -89,7 +124,6 @@ section {
 
     &__degree {
         font-size: 1.1em;
-        // font-style: italic;
         padding: 0.3em;
         font-weight: 400;
     }
