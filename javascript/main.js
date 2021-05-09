@@ -1,4 +1,5 @@
 const nav = $("nav");
+var default_section = ".education";
 
 $(".profile__photo").click(function () {
     expandNavigation();
@@ -8,17 +9,30 @@ $(".profile__photo").click(function () {
 $(".menu__item").click(function () {
     minimizeNavigation();
     if ($(this).hasClass("education-link")) {
-        $(".education").removeClass("hidden");
+        default_section = ".education";
     } else if ($(this).hasClass("work-experience-link")) {
-        $(".work-experience").removeClass("hidden");
+        default_section = ".work-experience";
     } else if ($(this).hasClass("projects-link")) {
-        $(".projects").removeClass("hidden");
+        default_section = ".projects";
     } else if ($(this).hasClass("about-me-link")) {
-        $(".about-me").removeClass("hidden");
+        default_section = ".about-me";
     } else if ($(this).hasClass("contact-link")) {
-        $(".contact").removeClass("hidden");
+        default_section = ".contact";
+    }
+    $(default_section).removeClass("hidden");
+});
+
+$(document).on("keypress", function (e) {
+    if (e.which == 8 && nav.hasClass("minimized")) {
+        expandNavigation();
+        $("section").addClass("hidden");
+    } else if (e.which == 13 && !nav.hasClass("minimizing")) {
+        minimizeNavigation();
+        $(default_section).removeClass("hidden");
     }
 });
+
+
 
 function expandNavigation() {
     if (nav.hasClass("minimized")) {
