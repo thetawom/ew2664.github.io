@@ -26,9 +26,9 @@ section {
     z-index: 0;
     display: flex;
 
-    margin-top: 50px;
-    @media (min-width: 768px) {
-        margin-top: 0px;
+    padding: 100px 0px;
+    @media (min-width: 1024px) {
+        padding: 0px 0px;
     }
 
     .content {
@@ -94,23 +94,50 @@ section {
         flex-direction: row;
     }
 
-    &__logo, &__empty-col {
-        flex: 1;
+    &__logo, &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__logo {
-        min-height: 80px;
-        margin-bottom: 20px;
+        flex: 1;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+
+        min-height: 100px;
+        margin-bottom: 20px;
+        @media (min-width: 1024px) {
+            margin-bottom: 0px;
+        }
+
+        &--columbia {
+            background-image: url("../assets/img/columbia_logo.png");
+        }
+
+        &--tas {
+            background-image: url("../assets/img/tas_logo.png");
+        }
     }
 
-    .logo--columbia {
-        background-image: url("../assets/img/columbia_logo.png");
-    }
-    .logo--tas {
-        background-image: url("../assets/img/tas_logo.png");
+    &__more {
+        flex: 1;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        i {
+            font-size: 3em;
+            display: block;
+            opacity: 40%;
+        }
+
+        i:hover {
+            opacity: 70%;
+            transition: opacity 200ms
+        }
     }
 
     &__text {

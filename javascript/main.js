@@ -22,6 +22,7 @@ $(".menu__item").click(function () {
     $(default_section).removeClass("hidden");
 });
 
+
 $(document).on("keypress", function (e) {
     if (e.which == 8 && nav.hasClass("minimized")) {
         expandNavigation();
