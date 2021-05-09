@@ -107,12 +107,14 @@ section.hidden {
   flex: 5;
 }
 .school h2 {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.6em;
+  font-family: "Alata", sans-serif;
 }
 .school__name {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "Alata", sans-serif;
+  margin-right: 10px;
 }
 .school__degree {
   font-size: 1.1em;
