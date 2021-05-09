@@ -85,15 +85,28 @@ section.hidden {
   margin: 30px 0;
   font-size: 0.8em;
   text-align: center;
+  transition: opacity 200ms;
+}
+.school.hidden {
+  opacity: 10%;
+}
+.school__row {
+  margin: 10px 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  .school {
+  .school__row {
     flex-direction: row;
   }
 }
-.school__logo, .school__more {
+.school__row.hidden {
+  display: none;
+}
+.school__logo, .school__more-icon {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,22 +130,27 @@ section.hidden {
 .school__logo--tas {
   background-image: url("../assets/img/tas_logo.png");
 }
-.school__more {
+.school__more-icon {
   flex: 1;
 }
-@media (max-width: 1024px) {
-  .school__more {
+@media (max-width: 1023px) {
+  .school__more-icon {
     display: none;
   }
 }
-.school__more i {
-  font-size: 3em;
+.school__more-icon i {
   display: block;
+  font-size: 3em;
   opacity: 40%;
+  transition: opacity 200ms, transform 300ms;
+  transform: rotate(90deg);
 }
-.school__more i:hover {
+.school__more-icon i:hover {
   opacity: 70%;
-  transition: opacity 200ms;
+  cursor: pointer;
+}
+.school__more-icon.active > i {
+  transform: rotate(270deg);
 }
 .school__text {
   flex: 5;
@@ -172,6 +190,23 @@ section.hidden {
 }
 .school__transcript::after {
   content: "]";
+}
+.school__more {
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.school__coursework {
+  width: 80%;
+  margin: auto;
+}
+.school__coursework a {
+  font-family: "Alata", sans-serif;
+  margin-right: 10px;
+}
+.school__coursework p {
+  line-height: 1.2em;
+  text-align: justify;
+  margin: 10px 0px;
 }
 
 .company {
