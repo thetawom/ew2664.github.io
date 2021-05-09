@@ -26,6 +26,11 @@ section {
     z-index: 0;
     display: flex;
 
+    margin-top: 50px;
+    @media (min-width: 768px) {
+        margin-top: 0px;
+    }
+
     .content {
         width: 80vw;
         margin: auto;
