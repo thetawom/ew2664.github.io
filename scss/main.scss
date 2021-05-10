@@ -106,7 +106,7 @@ section {
     font-size: 0.8em;
     text-align: center;
 
-    transition: opacity 200ms;
+    transition: opacity 200ms, border 300ms;
     &.hidden {
         opacity: 10%;
     }
@@ -283,6 +283,15 @@ section {
         li {
             margin-bottom: 5px;
         }
+    }
+}
+
+.about-me {
+    text-align: center;
+    img {
+        width: 300px;
+        height: auto;
+        margin-bottom: 50px;
     }
 }
 
