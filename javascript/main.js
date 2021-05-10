@@ -33,40 +33,6 @@ $(document).on("keypress", function (e) {
     }
 });
 
-$("#more-tas").click(function () {
-    $("#tas-more").slideToggle(250, "linear");
-    $("#more-tas").toggleClass("active");
-    if ($("#more-tas").hasClass("active")) {
-        $(".school--columbia").addClass("hidden");
-        $(".school--tas").removeClass("hidden");
-    } else if ($("#more-columbia").hasClass("active")) {
-        $(".school--columbia").removeClass("hidden");
-        $(".school--tas").addClass("hidden");
-    }
-    unhideSchools();
-});
-
-$("#more-columbia").click(function () {
-    $("#columbia-more").slideToggle(250, "linear");
-    $("#more-columbia").toggleClass("active");
-    if ($("#more-columbia").hasClass("active")) {
-        $(".school--tas").addClass("hidden");
-        $(".school--columbia").removeClass("hidden");
-    } else if ($("#more-tas").hasClass("active")) {
-        $(".school--tas").removeClass("hidden");
-        $(".school--columbia").addClass("hidden");
-    }
-    unhideSchools();
-});
-
-function unhideSchools() {
-    if (!$("#more-columbia").hasClass("active") && !$("#more-tas").hasClass("active")) {
-        $(".school--columbia").removeClass("hidden");
-        $(".school--tas").removeClass("hidden");
-    }
-}
-
-
 function expandNavigation() {
     if (nav.hasClass("minimized")) {
         nav.animate({
@@ -97,3 +63,13 @@ function minimizeNavigation() {
         }, 50);
     }
 }
+
+$(".drop-col").click(function () {
+    $(this).parent().siblings(".entry__more").slideToggle(250, "linear");
+    if ($(this).toggleClass("active").hasClass("active")) {
+        $(this).parent().parent().removeClass("inactive");
+        $(this).parent().parent().siblings(".entry").addClass("inactive");
+    } else if ($(this).parents(".content").find(".drop-col.active").length == 0) {
+        $(this).parents(".content").children(".entry").removeClass("inactive");
+    }
+});

@@ -42,12 +42,6 @@ section {
   visibility: visible;
   z-index: 0;
   display: flex;
-  padding: 100px 0px;
-}
-@media (min-width: 1024px) {
-  section {
-    padding: 0px 0px;
-  }
 }
 section .content {
   width: 80vw;
@@ -99,16 +93,17 @@ section.hidden {
   z-index: -1;
 }
 
-.school {
+.entry {
   margin: 30px 0;
   font-size: 0.8em;
   text-align: center;
-  transition: opacity 200ms, border 300ms;
+  transition: opacity 200ms;
 }
-.school.hidden {
+.entry.inactive {
   opacity: 10%;
 }
-.school__row {
+
+.entry__intro {
   margin: 10px 0;
   display: flex;
   justify-content: center;
@@ -116,21 +111,18 @@ section.hidden {
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  .school__row {
+  .entry__intro {
     flex-direction: row;
   }
 }
-.school__row.hidden {
-  display: none;
-}
-.school__logo, .school__more-icon {
+.entry__intro .logo-col, .entry__intro .drop-col {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.school__logo {
   flex: 1;
+}
+.entry__intro .logo-col {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -138,92 +130,91 @@ section.hidden {
   margin-bottom: 20px;
 }
 @media (min-width: 1024px) {
-  .school__logo {
+  .entry__intro .logo-col {
     margin-bottom: 0px;
   }
 }
-.school__logo--columbia {
-  background-image: url("../assets/img/columbia_logo.png");
-}
-.school__logo--tas {
-  background-image: url("../assets/img/tas_logo.png");
-}
-.school__more-icon {
-  flex: 1;
-}
 @media (max-width: 1023px) {
-  .school__more-icon {
+  .entry__intro .drop-col {
     display: none;
   }
 }
-.school__more-icon i {
+.entry__intro .drop-col i {
   display: block;
   font-size: 3em;
   opacity: 40%;
   transition: opacity 200ms, transform 300ms;
-  transform: rotate(90deg);
 }
-.school__more-icon i:hover {
+.entry__intro .drop-col i:hover {
   opacity: 70%;
   cursor: pointer;
 }
-.school__more-icon.active > i {
-  transform: rotate(270deg);
+.entry__intro .drop-col.active > i {
+  transform: rotate(180deg);
 }
-.school__text {
+.entry__intro .text-col {
   flex: 5;
 }
-.school h2 {
+.entry__intro .text-col h2 {
   font-size: 1em;
   line-height: 1.6em;
   font-family: "Alata", sans-serif;
 }
-.school__name {
+.entry__intro .text-col h2 a {
   font-size: 1.2em;
   font-family: "Alata", sans-serif;
   margin-right: 10px;
 }
-.school__degree {
+.entry__intro .text-col h3 {
   font-size: 1.1em;
   padding: 0.3em;
   font-weight: 400;
 }
-.school__gpa, .school__notes {
-  padding: 0.2em;
+.entry__intro .text-col p {
+  padding: 0.1em;
   font-size: 1em;
   line-height: 1.3em;
 }
-.school__gpa::before {
+
+.entry__more {
+  padding: 30px;
+  display: none;
+}
+
+.education__gpa::before {
   content: "GPA: ";
   font-weight: 300;
 }
-.school__transcript {
+.education__gpa a {
   display: inline-block;
   -webkit-text-decoration-color: #23967f !important;
           text-decoration-color: #23967f !important;
 }
-.school__transcript::before {
+.education__gpa a::before {
   margin-left: 10px;
   content: "[";
 }
-.school__transcript::after {
+.education__gpa a::after {
   content: "]";
 }
-.school__more {
-  padding: 30px;
-}
-.school__coursework {
+.education__coursework {
   width: 80%;
   margin: auto;
 }
-.school__coursework a {
+.education__coursework a {
   font-family: "Alata", sans-serif;
   margin-right: 10px;
 }
-.school__coursework p {
+.education__coursework p {
   line-height: 1.2em;
   text-align: justify;
   margin: 10px 0px;
+}
+.education #columbia-logo {
+  background-image: url("../assets/img/columbia_logo.png");
+}
+.education #tas-logo {
+  background-image: url("../assets/img/tas_logo.png");
 }
 
 .company {
