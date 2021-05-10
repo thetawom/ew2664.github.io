@@ -65,7 +65,7 @@ function minimizeNavigation() {
 }
 
 $(".drop-col").click(function () {
-    $(this).parent().siblings(".entry__more").slideToggle(250, "linear");
+    $(this).parent().siblings(".entry__more").slideToggle(250, "swing");
     if ($(this).toggleClass("active").hasClass("active")) {
         $(this).parent().parent().removeClass("inactive");
         $(this).parent().parent().siblings(".entry").addClass("inactive");

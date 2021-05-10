@@ -100,7 +100,7 @@ section.hidden {
   transition: opacity 200ms;
 }
 .entry.inactive {
-  opacity: 10%;
+  opacity: 30%;
 }
 
 .entry__intro {
@@ -217,33 +217,14 @@ section.hidden {
   background-image: url("../assets/img/tas_logo.png");
 }
 
-.company {
-  margin: 30px 0;
-  font-size: 0.8em;
-  text-align: center;
+.work-experience #jpl-logo {
+  background-image: url("../assets/img/jpl_logo.gif");
 }
-.company h2 {
-  font-size: 1.1em;
-  line-height: 1.6em;
+.work-experience #via-logo {
+  background-image: url("../assets/img/via_logo.png");
 }
-.company__name {
-  font-size: 1.1em;
-  font-family: "Alata", sans-serif;
-}
-.company__position {
-  font-size: 1.1em;
-  font-style: italic;
-  padding: 0.3em;
-  font-weight: 400;
-}
-.company__description {
-  text-align: center;
-  padding: 0.2em;
-  font-size: 1em;
-  line-height: 1.3em;
-}
-.company__description li {
-  margin-bottom: 5px;
+.work-experience #library-logo {
+  background-image: url("../assets/img/columbia_logo.png");
 }
 
 .about-me {
