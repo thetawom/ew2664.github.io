@@ -100,7 +100,7 @@ section.hidden {
   transition: opacity 200ms;
 }
 .entry.inactive {
-  opacity: 30%;
+  opacity: 15%;
 }
 
 .entry__intro {
@@ -127,6 +127,7 @@ section.hidden {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100px;
+  max-width: 120px;
   margin-bottom: 20px;
 }
 @media (min-width: 1024px) {

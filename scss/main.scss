@@ -103,7 +103,7 @@ section {
 
     transition: opacity 200ms;
     &.inactive {
-        opacity: 30%;
+        opacity: 15%;
     }
 }
 
@@ -131,6 +131,7 @@ section {
         background-position: center center;
 
         min-height: 100px;
+        max-width: 120px;
         margin-bottom: 20px;
         @media (min-width: 1024px) {
             margin-bottom: 0px;
