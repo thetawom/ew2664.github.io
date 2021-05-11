@@ -12,8 +12,8 @@ $(".menu__item").click(function () {
         default_section = ".education";
     } else if ($(this).hasClass("work-experience-link")) {
         default_section = ".work-experience";
-    } else if ($(this).hasClass("projects-link")) {
-        default_section = ".projects";
+    } else if ($(this).hasClass("activities-link")) {
+        default_section = ".activities";
     } else if ($(this).hasClass("about-me-link")) {
         default_section = ".about-me";
     } else if ($(this).hasClass("contact-link")) {

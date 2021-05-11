@@ -193,6 +193,11 @@ section {
 .entry__more {
     padding: 30px;
     display: none;
+
+    p, li {
+        line-height: 1.2em;
+        margin: 10px 0px;
+    }
 }
 
 .education {
@@ -220,76 +225,14 @@ section {
     &__coursework {
         width: 80%;
         margin: auto;
+        text-align: justify;
 
         a {
             font-family: 'Alata', sans-serif;
             margin-right: 10px;
         }
-
-        p {
-            line-height: 1.2em;
-            text-align: justify;
-            margin: 10px 0px;
-        }
-    }
-
-    #columbia-logo {
-        background-image: url("../assets/img/columbia_logo.png");
-    }
-
-    #tas-logo {
-        background-image: url("../assets/img/tas_logo.png");
     }
 }
-
-.work-experience {
-    #jpl-logo {
-        background-image: url("../assets/img/jpl_logo.gif");
-    }
-
-    #via-logo {
-        background-image: url("../assets/img/via_logo.png");
-    }
-
-    #library-logo {
-        background-image: url("../assets/img/columbia_logo.png");
-    }
-}
-
-// .company {
-//     margin: 30px 0;
-//     font-size: 0.8em;
-//     text-align: center;
-
-//     h2 {
-//         font-size: 1.1em;
-//         line-height: 1.6em;
-//     }
-
-//     &__name {
-//         font-size: 1.1em;
-//         font-family: 'Alata', sans-serif;
-//     }
-
-//     &__position {
-//         font-size: 1.1em;
-//         font-style: italic;
-//         padding: 0.3em;
-//         font-weight: 400;
-//     }
-
-//     &__description {
-//         text-align: center;
-//         padding: 0.2em;
-//         font-size: 1em;
-//         line-height: 1.3em;
-//         // list-style: square;
-
-//         li {
-//             margin-bottom: 5px;
-//         }
-//     }
-// }
 
 .about-me {
     text-align: center;
@@ -309,3 +252,42 @@ section {
         margin-right: 10px;
     }
 }
+
+
+#columbia-logo {
+    background-image: url("../assets/img/columbia_logo.png");
+}
+
+#tas-logo {
+    background-image: url("../assets/img/tas_logo.png");
+}
+
+#jpl-logo {
+    background-image: url("../assets/img/jpl_logo.gif");
+}
+
+#via-logo {
+    background-image: url("../assets/img/via_logo.png");
+}
+
+#library-logo {
+    background-image: url("../assets/img/columbia_logo.png");
+}
+
+#cscu-logo {
+    background-image: url("../assets/img/cscu_logo.gif");
+}
+
+#culd-logo {
+    background-image: url("../assets/img/culd_logo.png");
+}
+
+#csr-logo {
+    background-image: url("../assets/img/csr_logo.png");
+}
+
+#tasa-logo {
+    background-image: url("../assets/img/tasa_logo.png");
+}
+
+

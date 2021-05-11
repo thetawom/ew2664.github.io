@@ -181,6 +181,10 @@ section.hidden {
   padding: 30px;
   display: none;
 }
+.entry__more p, .entry__more li {
+  line-height: 1.2em;
+  margin: 10px 0px;
+}
 
 .education__gpa::before {
   content: "GPA: ";
@@ -201,31 +205,11 @@ section.hidden {
 .education__coursework {
   width: 80%;
   margin: auto;
+  text-align: justify;
 }
 .education__coursework a {
   font-family: "Alata", sans-serif;
   margin-right: 10px;
-}
-.education__coursework p {
-  line-height: 1.2em;
-  text-align: justify;
-  margin: 10px 0px;
-}
-.education #columbia-logo {
-  background-image: url("../assets/img/columbia_logo.png");
-}
-.education #tas-logo {
-  background-image: url("../assets/img/tas_logo.png");
-}
-
-.work-experience #jpl-logo {
-  background-image: url("../assets/img/jpl_logo.gif");
-}
-.work-experience #via-logo {
-  background-image: url("../assets/img/via_logo.png");
-}
-.work-experience #library-logo {
-  background-image: url("../assets/img/columbia_logo.png");
 }
 
 .about-me {
@@ -244,4 +228,40 @@ section.hidden {
 .contact span {
   font-weight: bold;
   margin-right: 10px;
+}
+
+#columbia-logo {
+  background-image: url("../assets/img/columbia_logo.png");
+}
+
+#tas-logo {
+  background-image: url("../assets/img/tas_logo.png");
+}
+
+#jpl-logo {
+  background-image: url("../assets/img/jpl_logo.gif");
+}
+
+#via-logo {
+  background-image: url("../assets/img/via_logo.png");
+}
+
+#library-logo {
+  background-image: url("../assets/img/columbia_logo.png");
+}
+
+#cscu-logo {
+  background-image: url("../assets/img/cscu_logo.gif");
+}
+
+#culd-logo {
+  background-image: url("../assets/img/culd_logo.png");
+}
+
+#csr-logo {
+  background-image: url("../assets/img/csr_logo.png");
+}
+
+#tasa-logo {
+  background-image: url("../assets/img/tasa_logo.png");
 }/*# sourceMappingURL=main.css.map */
